@@ -30,45 +30,5 @@ public class TimeFramesTest extends WebDriverTestBase {
         System.out.println("10 mins is ok");
 
 
-        //
-//        timeFramesBar.getTenMinutesReport();
-//        Thread.sleep(2000);
-//        System.out.println(timeFramesBar.getTimeDifference(driver));
-//        Assert.assertTrue(timeFramesBar.getTimeDifference(driver) < 10);
-//
-//
-//        timeFramesBar.getOneHourReport();
-//        Thread.sleep(2000);
-//        System.out.println(timeFramesBar.getTimeDifference(driver));
-//        Assert.assertTrue(timeFramesBar.getTimeDifference(driver) < 60);
-//
-//
-//        timeFramesBar.getOneDayReport();
-//        Thread.sleep(2000);
-//        System.out.println(timeFramesBar.getTimeDifference(driver));
-//        Assert.assertTrue(timeFramesBar.getTimeDifference(driver) < 1440);
-//
-//
-//        timeFramesBar.getYesterdayReport();
-//        Thread.sleep(2000);
-//        System.out.println(timeFramesBar.getTimeDifference(driver));
-//        Assert.assertTrue(timeFramesBar.getTimeDifference(driver) < 144000);
-//
-//
-//        timeFramesBar.getSevenDaysReport();
-//        Thread.sleep(2000);
-//        System.out.println(timeFramesBar.getTimeDifference(driver));
-//        Assert.assertTrue(timeFramesBar.getTimeDifference(driver) < 10800);
-//
-//
-//        timeFramesBar.getThirtyDaysReport();
-//        Thread.sleep(2000);
-//        System.out.println(timeFramesBar.getTimeDifference(driver));
-//        Assert.assertTrue(timeFramesBar.getTimeDifference(driver) < 43200);
-//
-//
-//        timeFramesBar.getRealTimeReport();
-//        Thread.sleep(2000);
-//        Assert.assertTrue(true);
     }
 }

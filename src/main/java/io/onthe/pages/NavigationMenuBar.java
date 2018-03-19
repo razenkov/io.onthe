@@ -16,17 +16,14 @@ public class NavigationMenuBar {
 
 
     public void switchToHomePage(WebDriver driver){
-        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         WebElement homeLink = driver.findElement(By.xpath(home_loc));
         homeLink.click();
     }
     public void switchToArticlesPage(WebDriver driver){
-        ArticlesPage articlesPage = PageFactory.initElements(driver, ArticlesPage.class);
         WebElement articleLink = driver.findElement(By.xpath(article_loc));
         articleLink.click();
     }
     public void switchToAuthorsPage(WebDriver driver){
-        AuthorsPage authorsPage = PageFactory.initElements(driver, AuthorsPage.class);
         WebElement authorsLink = driver.findElement(By.xpath(authors_loc));
         authorsLink.click();
     }

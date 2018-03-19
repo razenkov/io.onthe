@@ -22,43 +22,33 @@ public class AuthorsFiltersTest extends WebDriverTestBase {
         AuthorsPage authorsPage = PageFactory.initElements(driver, AuthorsPage.class);
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
         NavigationMenuBar menuBar = PageFactory.initElements(driver, NavigationMenuBar.class);
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+
         loginPage.login(driver);
 
         menuBar.switchToAuthorsPage(driver);
-        WebElement thirtyDaysF = driver.findElement(By.xpath(authorsPage.getThirtyDaysFilter()));
-        thirtyDaysF.click();
 
+        wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.xpath(articlesPage.getLoader()))));
 
-        List<WebElement> allAutors = new ArrayList<>();
-        //WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebElement thirtyDaysFilter = wait.until(ExpectedConditions.elementToBeClickable(
+                driver.findElement(By.xpath(authorsPage.getThirtyDaysFilter()))));
+        thirtyDaysFilter.click();
 
-//        for (int i = 0; i < allAutors.size(); ++i) {
-//            System.out.println(allAutors.get(i).getAttribute("data-name"));
-//        }
+        wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.xpath(articlesPage.getLoader()))));
 
+        List<WebElement> allAuthors = driver.findElements(By.xpath(authorsPage.getAllAuthors_loc()));
+        int size = allAuthors.size();
 
-        for (int j = 0; j < allAutors.size(); ++j) {
-            allAutors = driver.findElements(By.xpath(authorsPage.getAutor_loc()));
-            allAutors.get(j).click();
+        for (int j = 0; j < size; ++j) {
+            allAuthors = driver.findElements(By.xpath(authorsPage.getAllAuthors_loc()));
+            allAuthors.get(j).click();
 
-            //WebElement authorLink = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(authorsPage.getAutor_loc())));
-            //authorLink.click();
-
-            Thread.sleep(3000);
-            //Assert.assertTrue(authorsPage.isAuthorsPublications(driver, allAutors.get(j).getText()));
             List<WebElement> namesOnPage = driver.findElements(By.xpath(authorsPage.getNameFromPublication()));
-
-            //if (authorsPage.isAuthorsPublications(driver, allAutors.get(j).getText())) {
                 for (int k = 0; k < namesOnPage.size() - 1; ++k) {
-                    //System.out.println("first = " + namesOnPage.get(k).getText());
-                    //System.out.println("second = " + namesOnPage.get(k + 1).getText());
                     Assert.assertTrue(namesOnPage.get(k).getText().equals(namesOnPage.get(k + 1).getText()));
                 }
-            //}
-            System.out.println("iteration = " + j + " is fin");
             driver.navigate().back();
-            Thread.sleep(1000);
-
+            wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.xpath(articlesPage.getLoader()))));
         }
 
     }

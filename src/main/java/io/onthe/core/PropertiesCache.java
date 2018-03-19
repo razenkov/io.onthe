@@ -5,6 +5,7 @@ import java.io.InputStream;
 import java.util.Properties;
 
 public class PropertiesCache {
+
     private Properties config = new Properties();
     private static final PropertiesCache INSTANCE = new PropertiesCache();
 
