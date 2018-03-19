@@ -101,6 +101,6 @@ public class WebDriverTestBase {
     @AfterMethod
     //@AfterClass
     protected void tearDown() {
-       // driver.quit();
+        driver.quit();
     }
 }

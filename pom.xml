@@ -20,18 +20,38 @@
         </plugins>
     </build>
 
+    <!--<reporting>-->
+        <!--<plugins>-->
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-surefire-report-plugin</artifactId>-->
+                <!--<version>2.21.0</version>-->
+            <!--</plugin>-->
+        <!--</plugins>-->
+    <!--</reporting>-->
+
     <properties>
         <maven-compiler-plagin-version>3.7.0</maven-compiler-plagin-version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <aspectj.version>1.8.13</aspectj.version>
         <maven.surefire.plugin>2.20.1</maven.surefire.plugin>
         <selenium.version>3.8.1</selenium.version>
-        <testng.version>6.13</testng.version>
+        <testng.version>6.13.1</testng.version>
         <spring.web.version>5.0.4.RELEASE</spring.web.version>
         <webdrivermanager.version>2.1.0</webdrivermanager.version>
         <allure.version>2.0-BETA21</allure.version>
         <io.cucumber.version>2.3.1</io.cucumber.version>
     </properties>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>2.1.1</version>
+            </plugin>
+        </plugins>
+    </reporting>
 
     <!--<dependencies>-->
         <!--<dependency>-->
@@ -84,6 +104,12 @@
             <version>${allure.version}</version>
         </dependency>
 
+        <!--<dependency>-->
+            <!--<groupId>org.apache.maven.plugins</groupId>-->
+            <!--<artifactId>maven-surefire-plugin</artifactId>-->
+            <!--<version>2.21.0</version>-->
+        <!--</dependency>-->
+
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -96,12 +122,12 @@
             <version>${webdrivermanager.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/javax.servlet/com.springsource.javax.servlet -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>com.springsource.javax.servlet</artifactId>
-            <version>2.4.0</version>
-            <scope>provided</scope>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>javax.servlet</groupId>-->
+            <!--<artifactId>com.springsource.javax.servlet</artifactId>-->
+            <!--<version>2.4.0</version>-->
+            <!--<scope>provided</scope>-->
+        <!--</dependency>-->
 
 
         <!--<dependency>-->

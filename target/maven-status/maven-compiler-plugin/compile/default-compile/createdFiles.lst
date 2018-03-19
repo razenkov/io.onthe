@@ -1,0 +1,12 @@
+io/onthe/pages/NavigationMenuBar.class
+io/onthe/pages/TvDashWelcomePage.class
+io/onthe/pages/ArticlesPage.class
+com/ruhighload/pages/RuhighloadHomePage.class
+io/onthe/pages/AuthorsPage.class
+io/onthe/pages/TvDashPage.class
+io/onthe/pages/HomePage.class
+io/onthe/core/PropertiesCache.class
+io/onthe/pages/TimeFramesBar.class
+io/onthe/core/WebDriverTestBase.class
+io/onthe/pages/LoginPage.class
+io/onthe/core/TestListener.class

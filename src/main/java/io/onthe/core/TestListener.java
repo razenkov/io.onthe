@@ -1,6 +1,6 @@
 package io.onthe.core;
 
-import io.qameta.allure.Attachment;
+//import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -43,16 +43,16 @@ public class TestListener implements ITestListener {
     //@Attachment(value = "{0}", type = "image/png")
     //public byte[] saveScreenshot(){return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);}
 
-    @Attachment(value = "{0}", type = "image/png")
-    public byte[] saveImageAttach(String attachName){
-        try {
-            File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            return toByteArray(scrFile);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        return new byte[0];
-    }
+//    @Attachment(value = "{0}", type = "image/png")
+//    public byte[] saveImageAttach(String attachName){
+//        try {
+//            File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//            return toByteArray(scrFile);
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
+//        return new byte[0];
+//    }
     @Override
     public void onTestSkipped(ITestResult iTestResult) {
     }

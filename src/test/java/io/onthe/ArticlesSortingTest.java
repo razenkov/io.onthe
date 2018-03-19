@@ -1,11 +1,9 @@
 package io.onthe;
 
-import io.onthe.core.AvoidSlaleElements;
 import io.onthe.core.WebDriverTestBase;
 import io.onthe.pages.ArticlesPage;
 import io.onthe.pages.LoginPage;
 import io.onthe.pages.NavigationMenuBar;
-import org.omg.PortableServer.THREAD_POLICY_ID;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
