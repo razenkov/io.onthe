@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class LoginPage {
 
-    public void login(WebDriver driver) throws InterruptedException {
+    public void login(WebDriver driver) {
         driver.get("https://onthe.io/auth");
         WebElement emailFiels = driver.findElement(By.name("email"));
         emailFiels.sendKeys("gexibawer@one2mail.info");
@@ -24,39 +24,28 @@ public class LoginPage {
         WebElement btn2 = driver.findElement(By.xpath("/html/body/div[10]/div[2]/button"));
         btn2.click();
 
-        ArrayList tabs2 = new ArrayList(driver.getWindowHandles());
-        if (!tabs2.isEmpty()) {
-            //System.out.println(tabs2.get(0).toString());
-            //System.out.println(tabs2.get(1).toString());
-            //System.out.println("LIST SIZE  = " + tabs2.size());
+        //To switch between tabs create tabsList
+        ArrayList tabsList = new ArrayList(driver.getWindowHandles());
 
-            if (tabs2.size() == 2){
-                //System.out.println("TAB ! = " + tabs2.get(0).toString());
-                //System.out.println("TAB 2 = " + tabs2.get(1).toString());
-
-                driver.switchTo().window(tabs2.get(0).toString());
-                Map<String, String> tabsList = new HashMap<>();
-
+        if (!tabsList.isEmpty()) {
+            if (tabsList.size() == 2){
+                driver.switchTo().window(tabsList.get(0).toString());
+                Map<String, String> tabsListNames = new HashMap<>();
 
                 WebElement links = driver.findElement(By.xpath("//*[@id=\"posts\"]/li/a"));
-                driver.switchTo().window(tabs2.get(0).toString());
+                driver.switchTo().window(tabsList.get(0).toString());
 
+                //Here linking of tabsNames with simple page names to operate with
                 if(links.isDisplayed()){
-                    tabsList.put("LinksPage", tabs2.get(0).toString());
-                    tabsList.put("StatPage", tabs2.get(1).toString());
+                    tabsListNames.put("LinksPage", tabsList.get(0).toString());
+                    tabsListNames.put("StatPage", tabsList.get(1).toString());
                 }else {
-                    tabsList.put("StatPage", tabs2.get(0).toString());
-                    tabsList.put("LinksPage", tabs2.get(1).toString());
+                    tabsListNames.put("StatPage", tabsList.get(0).toString());
+                    tabsListNames.put("LinksPage", tabsList.get(1).toString());
                 }
-
-                driver.switchTo().window(tabsList.get("StatPage"));
-
-
+                //Switching to project page to be sure page is right after login
+                driver.switchTo().window(tabsListNames.get("StatPage"));
             }
-
         }
-
-
-
     }
 }

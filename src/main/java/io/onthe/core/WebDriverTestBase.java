@@ -10,7 +10,6 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.*;
 import java.util.concurrent.TimeUnit;
 
-
 @Listeners({io.onthe.core.TestListener.class})
 public class WebDriverTestBase {
 
@@ -20,7 +19,6 @@ public class WebDriverTestBase {
 
     @Parameters({"platform", "remoteBrowser"})
 
-    //@BeforeClass
     @BeforeMethod
     protected void setup(@Optional String platform, @Optional String remoteBrowser) {
         switch (browser) {
@@ -55,8 +53,6 @@ public class WebDriverTestBase {
                 PropertiesCache.getProperty("wait.script")), TimeUnit.SECONDS);
         driver.manage().window().maximize();
     }
-
-    //@AfterClass
     @AfterMethod
     protected void tearDown() {
        driver.quit();

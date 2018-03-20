@@ -1,20 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 12, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 204.733 sec <<< FAILURE!
-finishedReadingWorstFilter(io.onthe.ArticlesSortingTest)  Time elapsed: 14.724 sec  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at org.testng.Assert.assertTrue(Assert.java:54)
-	at io.onthe.ArticlesSortingTest.finishedReadingWorstFilter(ArticlesSortingTest.java:115)
-
-recirculationBestFilter(io.onthe.ArticlesSortingTest)  Time elapsed: 16.828 sec  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at org.testng.Assert.assertTrue(Assert.java:54)
-	at io.onthe.ArticlesSortingTest.recirculationBestFilter(ArticlesSortingTest.java:233)
-
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 191.737 sec

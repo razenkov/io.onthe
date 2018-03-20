@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="12" failures="2" name="TestSuite" time="184.884" errors="0" skipped="0">
+<testsuite tests="12" failures="0" name="TestSuite" time="172.955" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib"/>
     <property name="java.vm.version" value="25.161-b12"/>
-    <property name="browser" value="chrome"/>
     <property name="gopherProxySet" value="false"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="maven.multiModuleProjectDirectory" value="/Users/mymac/IdeaProjects/onthemedia"/>
@@ -47,7 +46,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dbrowser=chrome clean test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -65,42 +64,16 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="io.onthe.ArticlesSortingTest" name="averageTimeBestFilter" time="15.644"/>
-  <testcase classname="io.onthe.ArticlesSortingTest" name="averageTimeWorstFilter" time="14.79"/>
-  <testcase classname="io.onthe.ArticlesSortingTest" name="finishedReadingBestFilter" time="13.189"/>
-  <testcase classname="io.onthe.ArticlesSortingTest" name="finishedReadingWorstFilter" time="14.724">
-    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at org.testng.Assert.assertTrue(Assert.java:54)
-	at io.onthe.ArticlesSortingTest.finishedReadingWorstFilter(ArticlesSortingTest.java:115)
-</failure>
-    <system-err>Starting ChromeDriver 2.37.543654 (a46b62e9900f5ac48951f8ad68d9e03eded4cc8d) on port 44071
-Only local connections are allowed.
-Mar 19, 2018 10:16:48 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: OSS
-</system-err>
-  </testcase>
-  <testcase classname="io.onthe.ArticlesSortingTest" name="pageViewsBestFilter" time="15.166"/>
-  <testcase classname="io.onthe.ArticlesSortingTest" name="pageViewsWorstFilter" time="16.971"/>
-  <testcase classname="io.onthe.ArticlesSortingTest" name="recirculationBestFilter" time="16.828">
-    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at org.testng.Assert.assertTrue(Assert.java:54)
-	at io.onthe.ArticlesSortingTest.recirculationBestFilter(ArticlesSortingTest.java:233)
-</failure>
-    <system-err>Starting ChromeDriver 2.37.543654 (a46b62e9900f5ac48951f8ad68d9e03eded4cc8d) on port 12916
-Only local connections are allowed.
-Mar 19, 2018 10:17:40 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: OSS
-</system-err>
-  </testcase>
-  <testcase classname="io.onthe.ArticlesSortingTest" name="recirculationWorstFilter" time="14.783"/>
-  <testcase classname="io.onthe.DataTrackingTest" name="checkForLinksMethodTypes" time="0.531"/>
-  <testcase classname="io.onthe.TimeFramesTest" name="TimeFramesTest" time="12.81"/>
-  <testcase classname="io.onthe.AuthorsFiltersTest" name="autorsAndPublications" time="24.171"/>
-  <testcase classname="io.onthe.MenuTest" name="switchBetweenMenuTabs" time="25.277"/>
+  <testcase classname="io.onthe.ArticlesSortingTest" name="averageTimeBestFilter" time="12.634"/>
+  <testcase classname="io.onthe.ArticlesSortingTest" name="averageTimeWorstFilter" time="12.382"/>
+  <testcase classname="io.onthe.ArticlesSortingTest" name="finishedReadingBestFilter" time="11.613"/>
+  <testcase classname="io.onthe.ArticlesSortingTest" name="finishedReadingWorstFilter" time="12.488"/>
+  <testcase classname="io.onthe.ArticlesSortingTest" name="pageViewsBestFilter" time="12.952"/>
+  <testcase classname="io.onthe.ArticlesSortingTest" name="pageViewsWorstFilter" time="13.409"/>
+  <testcase classname="io.onthe.ArticlesSortingTest" name="recirculationBestFilter" time="11.904"/>
+  <testcase classname="io.onthe.ArticlesSortingTest" name="recirculationWorstFilter" time="13.061"/>
+  <testcase classname="io.onthe.DataTrackingTest" name="checkForLinksMethodTypes" time="0.576"/>
+  <testcase classname="io.onthe.TimeFramesTest" name="TimeFramesTest" time="16.613"/>
+  <testcase classname="io.onthe.AuthorsFiltersTest" name="authorsAndPublications" time="32.301"/>
+  <testcase classname="io.onthe.MenuTest" name="switchBetweenMenuTabs" time="23.022"/>
 </testsuite>

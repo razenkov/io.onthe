@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Command_line_suite">
-              <span class="suite-name border-failed">Command line suite</span>
+              <span class="suite-name border-passed">Command line suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,26 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">12 methods, 2 failed,   10 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Command_line_suite" class="hide-methods failed suite-Command_line_suite"> (hide)</a> <!-- hide-methods failed suite-Command_line_suite -->
-                      <a href="#" panel-name="suite-Command_line_suite" class="show-methods failed suite-Command_line_suite"> (show)</a> <!-- show-methods failed suite-Command_line_suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Command_line_suite">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="io.onthe.ArticlesSortingTest" hash-for-method="finishedReadingWorstFilter">finishedReadingWorstFilter</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="io.onthe.ArticlesSortingTest" hash-for-method="recirculationBestFilter">recirculationBestFilter</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Command_line_suite -->
+                    <span class="method-stats">12 methods,   12 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -126,7 +107,7 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="io.onthe.AuthorsFiltersTest" hash-for-method="autorsAndPublications">autorsAndPublications</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="io.onthe.AuthorsFiltersTest" hash-for-method="authorsAndPublications">authorsAndPublications</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -151,12 +132,22 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="io.onthe.ArticlesSortingTest" hash-for-method="finishedReadingWorstFilter">finishedReadingWorstFilter</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="io.onthe.ArticlesSortingTest" hash-for-method="pageViewsBestFilter">pageViewsBestFilter</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="io.onthe.ArticlesSortingTest" hash-for-method="pageViewsWorstFilter">pageViewsWorstFilter</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="io.onthe.ArticlesSortingTest" hash-for-method="recirculationBestFilter">recirculationBestFilter</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -181,62 +172,17 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Command_line_suite" class="panel Command_line_suite">
-          <div class="suite-Command_line_suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">io.onthe.ArticlesSortingTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="finishedReadingWorstFilter">
-                  </a> <!-- finishedReadingWorstFilter -->
-                  <span class="method-name">finishedReadingWorstFilter</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at io.onthe.ArticlesSortingTest.finishedReadingWorstFilter(ArticlesSortingTest.java:115)
-... Removed 39 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="recirculationBestFilter">
-                  </a> <!-- recirculationBestFilter -->
-                  <span class="method-name">recirculationBestFilter</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at io.onthe.ArticlesSortingTest.recirculationBestFilter(ArticlesSortingTest.java:233)
-... Removed 39 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Command_line_suite-class-failed -->
           <div class="suite-Command_line_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">io.onthe.AuthorsFiltersTest</span>
+              <span class="class-name">io.onthe.MenuTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="autorsAndPublications">
-                  </a> <!-- autorsAndPublications -->
-                  <span class="method-name">autorsAndPublications</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Command_line_suite-class-passed -->
-          <div class="suite-Command_line_suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">io.onthe.DataTrackingTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="checkForLinksMethodTypes">
-                  </a> <!-- checkForLinksMethodTypes -->
-                  <span class="method-name">checkForLinksMethodTypes</span>
+                  <a name="switchBetweenMenuTabs">
+                  </a> <!-- switchBetweenMenuTabs -->
+                  <span class="method-name">switchBetweenMenuTabs</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -270,6 +216,13 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="finishedReadingWorstFilter">
+                  </a> <!-- finishedReadingWorstFilter -->
+                  <span class="method-name">finishedReadingWorstFilter</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="pageViewsBestFilter">
                   </a> <!-- pageViewsBestFilter -->
                   <span class="method-name">pageViewsBestFilter</span>
@@ -284,9 +237,46 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="recirculationBestFilter">
+                  </a> <!-- recirculationBestFilter -->
+                  <span class="method-name">recirculationBestFilter</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="recirculationWorstFilter">
                   </a> <!-- recirculationWorstFilter -->
                   <span class="method-name">recirculationWorstFilter</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">io.onthe.DataTrackingTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkForLinksMethodTypes">
+                  </a> <!-- checkForLinksMethodTypes -->
+                  <span class="method-name">checkForLinksMethodTypes</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">io.onthe.AuthorsFiltersTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="authorsAndPublications">
+                  </a> <!-- authorsAndPublications -->
+                  <span class="method-name">authorsAndPublications</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -302,21 +292,6 @@
                   <a name="TimeFramesTest">
                   </a> <!-- TimeFramesTest -->
                   <span class="method-name">TimeFramesTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Command_line_suite-class-passed -->
-          <div class="suite-Command_line_suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">io.onthe.MenuTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="switchBetweenMenuTabs">
-                  </a> <!-- switchBetweenMenuTabs -->
-                  <span class="method-name">switchBetweenMenuTabs</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -378,58 +353,58 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(12);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'switchBetweenMenuTabs')
-data.setCell(0, 2, 'io.onthe.MenuTest')
-data.setCell(0, 3, 25279);
+data.setCell(0, 1, 'authorsAndPublications')
+data.setCell(0, 2, 'io.onthe.AuthorsFiltersTest')
+data.setCell(0, 3, 32301);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'autorsAndPublications')
-data.setCell(1, 2, 'io.onthe.AuthorsFiltersTest')
-data.setCell(1, 3, 24172);
+data.setCell(1, 1, 'switchBetweenMenuTabs')
+data.setCell(1, 2, 'io.onthe.MenuTest')
+data.setCell(1, 3, 23022);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'pageViewsWorstFilter')
-data.setCell(2, 2, 'io.onthe.ArticlesSortingTest')
-data.setCell(2, 3, 16972);
+data.setCell(2, 1, 'TimeFramesTest')
+data.setCell(2, 2, 'io.onthe.TimeFramesTest')
+data.setCell(2, 3, 16613);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'recirculationBestFilter')
+data.setCell(3, 1, 'pageViewsWorstFilter')
 data.setCell(3, 2, 'io.onthe.ArticlesSortingTest')
-data.setCell(3, 3, 16172);
+data.setCell(3, 3, 13408);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'averageTimeBestFilter')
+data.setCell(4, 1, 'recirculationWorstFilter')
 data.setCell(4, 2, 'io.onthe.ArticlesSortingTest')
-data.setCell(4, 3, 15816);
+data.setCell(4, 3, 13061);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'pageViewsBestFilter')
 data.setCell(5, 2, 'io.onthe.ArticlesSortingTest')
-data.setCell(5, 3, 15168);
+data.setCell(5, 3, 12953);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'averageTimeWorstFilter')
+data.setCell(6, 1, 'averageTimeBestFilter')
 data.setCell(6, 2, 'io.onthe.ArticlesSortingTest')
-data.setCell(6, 3, 14792);
+data.setCell(6, 3, 12634);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'recirculationWorstFilter')
+data.setCell(7, 1, 'finishedReadingWorstFilter')
 data.setCell(7, 2, 'io.onthe.ArticlesSortingTest')
-data.setCell(7, 3, 14785);
+data.setCell(7, 3, 12488);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'finishedReadingWorstFilter')
+data.setCell(8, 1, 'averageTimeWorstFilter')
 data.setCell(8, 2, 'io.onthe.ArticlesSortingTest')
-data.setCell(8, 3, 13945);
+data.setCell(8, 3, 12382);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'finishedReadingBestFilter')
+data.setCell(9, 1, 'recirculationBestFilter')
 data.setCell(9, 2, 'io.onthe.ArticlesSortingTest')
-data.setCell(9, 3, 13192);
+data.setCell(9, 3, 11904);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'TimeFramesTest')
-data.setCell(10, 2, 'io.onthe.TimeFramesTest')
-data.setCell(10, 3, 12810);
+data.setCell(10, 1, 'finishedReadingBestFilter')
+data.setCell(10, 2, 'io.onthe.ArticlesSortingTest')
+data.setCell(10, 3, 11612);
 data.setCell(11, 0, 11)
 data.setCell(11, 1, 'checkForLinksMethodTypes')
 data.setCell(11, 2, 'io.onthe.DataTrackingTest')
-data.setCell(11, 3, 533);
+data.setCell(11, 3, 576);
 window.suiteTableData['Command_line_suite']= { tableData: data, tableDiv: 'times-div-Command_line_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Command_line_suite">
               </div> <!-- times-div-Command_line_suite -->
             </div> <!-- times-div -->
@@ -462,159 +437,155 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">averageTimeBestFilter</span>
-                <span class="method-start">2279 ms</span>
+                <span class="method-start">2252 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">18104 ms</span>
+                <span class="method-start">14886 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(null, null)</span>
-                <span class="method-start">18189 ms</span>
+                <span class="method-start">14973 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">averageTimeWorstFilter</span>
-                <span class="method-start">19650 ms</span>
+                <span class="method-start">16369 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">34442 ms</span>
+                <span class="method-start">28751 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(null, null)</span>
-                <span class="method-start">34527 ms</span>
+                <span class="method-start">28835 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">finishedReadingBestFilter</span>
-                <span class="method-start">35951 ms</span>
+                <span class="method-start">30242 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">49143 ms</span>
+                <span class="method-start">41855 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(null, null)</span>
-                <span class="method-start">49231 ms</span>
+                <span class="method-start">41936 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">finishedReadingWorstFilter</span>
-                <span class="method-start">50656 ms</span>
+                <span class="method-start">43320 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">65383 ms</span>
+                <span class="method-start">55809 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(null, null)</span>
-                <span class="method-start">65465 ms</span>
+                <span class="method-start">55890 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">pageViewsBestFilter</span>
-                <span class="method-start">66890 ms</span>
+                <span class="method-start">57248 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">82059 ms</span>
+                <span class="method-start">70201 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(null, null)</span>
-                <span class="method-start">82139 ms</span>
+                <span class="method-start">70281 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">pageViewsWorstFilter</span>
-                <span class="method-start">83534 ms</span>
+                <span class="method-start">71705 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">100507 ms</span>
+                <span class="method-start">85113 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(null, null)</span>
-                <span class="method-start">100589 ms</span>
+                <span class="method-start">85194 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">recirculationBestFilter</span>
-                <span class="method-start">102095 ms</span>
+                <span class="method-start">86599 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">118925 ms</span>
+                <span class="method-start">98503 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(null, null)</span>
-                <span class="method-start">119007 ms</span>
+                <span class="method-start">98584 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">recirculationWorstFilter</span>
-                <span class="method-start">120393 ms</span>
+                <span class="method-start">99947 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">135178 ms</span>
+                <span class="method-start">113008 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">io.onthe.DataTrackingTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(null, null)</span>
-                <span class="method-start">135266 ms</span>
+                <span class="method-start">113089 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">checkForLinksMethodTypes</span>
-                <span class="method-start">136654 ms</span>
+                <span class="method-start">114487 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">137188 ms</span>
+                <span class="method-start">115063 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">io.onthe.TimeFramesTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(null, null)</span>
-                <span class="method-start">137269 ms</span>
+                <span class="method-start">115143 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TimeFramesTest</span>
-                <span class="method-start">138673 ms</span>
+                <span class="method-start">116537 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">151484 ms</span>
+                <span class="method-start">133151 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">io.onthe.AuthorsFiltersTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(null, null)</span>
-                <span class="method-start">151569 ms</span>
+                <span class="method-start">133232 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">autorsAndPublications</span>
-                <span class="method-start">152967 ms</span>
+                <span class="method-name">authorsAndPublications</span>
+                <span class="method-start">134602 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">177140 ms</span>
+                <span class="method-start">166904 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">io.onthe.MenuTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(null, null)</span>
-                <span class="method-start">177228 ms</span>
+                <span class="method-start">166985 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">switchBetweenMenuTabs</span>
-                <span class="method-start">178908 ms</span>
+                <span class="method-start">168398 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">204188 ms</span>
+                <span class="method-start">191420 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

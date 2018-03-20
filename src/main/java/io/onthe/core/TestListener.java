@@ -12,8 +12,6 @@ import org.testng.ITestResult;
 import java.io.File;
 import java.io.IOException;
 
-import static com.google.common.io.Files.toByteArray;
-
 public class TestListener implements ITestListener {
     private WebDriver driver;
     @Override
@@ -29,7 +27,6 @@ public class TestListener implements ITestListener {
         File f = new File("/Users/mymac/IdeaProjects/onthemedia/FailedTestsScreens");
         try {
             FileUtils.cleanDirectory(f);
-            //saveImageAttach("FailedTestsScreens/" + iTestResult.getMethod().getMethodName() + ".png");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -40,16 +37,6 @@ public class TestListener implements ITestListener {
             e.printStackTrace();
         }
     }
-//    @Attachment(value = "{0}", type = "image/png")
-//    public byte[] saveImageAttach(String attachName){
-//        try {
-//            File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-//            return toByteArray(scrFile);
-//        }catch (Exception e){
-//            e.printStackTrace();
-//        }
-//        return new byte[0];
-//    }
     @Override
     public void onTestSkipped(ITestResult iTestResult) {
     }
