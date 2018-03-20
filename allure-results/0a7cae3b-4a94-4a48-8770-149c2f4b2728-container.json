@@ -1,1 +1,0 @@
-{"uuid":"0a7cae3b-4a94-4a48-8770-149c2f4b2728","name":"io.onthe.core.WebDriverTestBase.tearDown","description":"","start":1521492025552,"stop":1521492025630,"children":["be99d663-5f06-4b13-81d7-09979b112aab"],"afters":[{"name":"tearDown","status":"passed","stage":"finished","description":"","start":1521492025552,"stop":1521492025630}]}

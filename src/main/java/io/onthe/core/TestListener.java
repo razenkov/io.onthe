@@ -1,6 +1,6 @@
 package io.onthe.core;
 
-import io.qameta.allure.Attachment;
+//import io.qameta.allure.Attachment;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -29,7 +29,7 @@ public class TestListener implements ITestListener {
         File f = new File("/Users/mymac/IdeaProjects/onthemedia/FailedTestsScreens");
         try {
             FileUtils.cleanDirectory(f);
-            saveImageAttach("FailedTestsScreens/" + iTestResult.getMethod().getMethodName() + ".png");
+            //saveImageAttach("FailedTestsScreens/" + iTestResult.getMethod().getMethodName() + ".png");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -40,16 +40,16 @@ public class TestListener implements ITestListener {
             e.printStackTrace();
         }
     }
-    @Attachment(value = "{0}", type = "image/png")
-    public byte[] saveImageAttach(String attachName){
-        try {
-            File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            return toByteArray(scrFile);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        return new byte[0];
-    }
+//    @Attachment(value = "{0}", type = "image/png")
+//    public byte[] saveImageAttach(String attachName){
+//        try {
+//            File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//            return toByteArray(scrFile);
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
+//        return new byte[0];
+//    }
     @Override
     public void onTestSkipped(ITestResult iTestResult) {
     }

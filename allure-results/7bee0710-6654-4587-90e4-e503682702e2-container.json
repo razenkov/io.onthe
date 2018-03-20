@@ -1,1 +1,0 @@
-{"uuid":"7bee0710-6654-4587-90e4-e503682702e2","name":"io.onthe.core.WebDriverTestBase.setup","description":"","start":1521477853909,"stop":1521477855379,"children":["ca04385b-de89-48f3-a23e-7a4f9340fb88"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","start":1521477853909,"stop":1521477855379}]}

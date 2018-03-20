@@ -42,7 +42,6 @@ public class MenuTest extends WebDriverTestBase {
         menuBar.switchToTvDashWelcomePage(driver);
         wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.xpath(articlesPage.getLoader()))));
         Assert.assertTrue(welcomePage.isTvDashWelcomePage());
-
     }
 }
 

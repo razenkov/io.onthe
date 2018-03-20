@@ -17,7 +17,7 @@ import java.util.List;
 public class AuthorsFiltersTest extends WebDriverTestBase {
 
     @Test
-    public void autorsAndPublications() throws InterruptedException {
+    public void authorsAndPublications() throws InterruptedException {
         ArticlesPage articlesPage = PageFactory.initElements(driver, ArticlesPage.class);
         AuthorsPage authorsPage = PageFactory.initElements(driver, AuthorsPage.class);
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
@@ -30,6 +30,7 @@ public class AuthorsFiltersTest extends WebDriverTestBase {
 
         wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.xpath(articlesPage.getLoader()))));
 
+        //choose for thirtyDaysFilter from dropdown
         WebElement thirtyDaysFilter = wait.until(ExpectedConditions.elementToBeClickable(
                 driver.findElement(By.xpath(authorsPage.getThirtyDaysFilter()))));
         thirtyDaysFilter.click();
@@ -39,15 +40,19 @@ public class AuthorsFiltersTest extends WebDriverTestBase {
         List<WebElement> allAuthors = driver.findElements(By.xpath(authorsPage.getAllAuthors_loc()));
         int size = allAuthors.size();
 
+        String currentURL = driver.getCurrentUrl();
+
         for (int j = 0; j < size; ++j) {
+            //getting authors one by one to check publications
             allAuthors = driver.findElements(By.xpath(authorsPage.getAllAuthors_loc()));
             allAuthors.get(j).click();
 
+            //compare publications
             List<WebElement> namesOnPage = driver.findElements(By.xpath(authorsPage.getNameFromPublication()));
-                for (int k = 0; k < namesOnPage.size() - 1; ++k) {
-                    Assert.assertTrue(namesOnPage.get(k).getText().equals(namesOnPage.get(k + 1).getText()));
-                }
-            driver.navigate().back();
+            for (int k = 0; k < namesOnPage.size() - 1; ++k) {
+                Assert.assertTrue(namesOnPage.get(k).getText().equals(namesOnPage.get(k + 1).getText()));
+            }
+            driver.get(currentURL);
             wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.xpath(articlesPage.getLoader()))));
         }
 

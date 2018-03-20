@@ -5,18 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.sql.Time;
-
-import static java.time.temporal.ChronoUnit.MINUTES;
 
 public class TimeFramesBar {
 
@@ -43,39 +31,40 @@ public class TimeFramesBar {
     @FindBy(how = How.XPATH, using = "//*[@data-tooltip='Last 30 days']")
     private WebElement thirtyDays;
 
-    public long getTimeDifference(WebDriver driver) throws ParseException {
-        List<WebElement> timeStampsList = driver.findElements(By.xpath(eventTimeStamps_loc));
+    private String oneDay_id = "1D";
+    private String oneHour_id = "1H";
+    private String realTime_id = "RT";
+    private String tenMins_id = "10M";
+    private String sevenDays_id = "7D";
+    private String thirtyDays_id = "30D";
+    private String yesterday_id = "YD";
 
-        DateFormat formatter = new SimpleDateFormat("HH:mm");
+    public String getYesterday_id() {
+        return yesterday_id;
+    }
 
-        List<Time> timeOfEvents = new ArrayList<>();
+    public String getOneDay_id() {
+        return oneDay_id;
+    }
 
-        for (int i = 0; i < timeStampsList.size(); ++i){
+    public String getOneHour_id() {
+        return oneHour_id;
+    }
 
-            Time timeValue = new java.sql.Time(formatter.parse(timeStampsList.get(i).getText()).getTime());
-            timeOfEvents.add(timeValue);
-        }
+    public String getRealTime_id() {
+        return realTime_id;
+    }
 
-        Time min = timeOfEvents.get(0);
-        Time max = timeOfEvents.get(0);
+    public String getTenMins_id() {
+        return tenMins_id;
+    }
 
-        for(int j = 0; j < timeOfEvents.size(); ++j){
-            if(timeOfEvents.get(j).before(min)){
-                min = timeOfEvents.get(j);
-            }
-            if(timeOfEvents.get(j).after(max)){
-                max = timeOfEvents.get(j);
-            }
-        }
+    public String getSevenDays_id() {
+        return sevenDays_id;
+    }
 
-        LocalTime minimal = min.toLocalTime();
-        LocalTime maximal = max.toLocalTime();
-
-        System.out.println(min.toString());
-        System.out.println(max.toString());
-
-        System.out.println( "------------------" + minimal.until(maximal, MINUTES));
-        return  MINUTES.between(minimal, maximal);
+    public String getThirtyDays_id() {
+        return thirtyDays_id;
     }
 
     public void getRealTimeReport(){
@@ -106,23 +95,9 @@ public class TimeFramesBar {
         thirtyDays.click();
     }
 
-    public boolean isRealTimePage(WebDriver driver){
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-
-        WebElement realtime = wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//*[@class='value__circle-title']"))));
-        if(realtime.getText().equals("realtime") && realtime.isDisplayed()) {
-            return true;
-        }else {
-            return false;
-        }
-    }
-    public boolean isTenMinsPage(WebDriver driver){
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-
-        //WebElement tenMins = driver.findElement(By.xpath("//*[@class='value__circle-title']"));
-        WebElement tenMins = wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//*[@class='value__circle-title']"))));
-
-        if(tenMins.getText().equals("last 10 minutes") && tenMins.isDisplayed()) {
+    public boolean isCurrentTab(WebDriver driver, String nameOfTab){
+        WebElement currentTab = driver.findElement(By.xpath("//*[@class='period_switch_item on']"));
+        if(currentTab.getText().equals(nameOfTab)){
             return true;
         }else {
             return false;
