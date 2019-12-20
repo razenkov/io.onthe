@@ -26,6 +26,7 @@ public class WebDriverTestBase {
                 manager.firefoxdriver().setup();
                 FirefoxOptions options = new FirefoxOptions();
                 options.addArguments("--disable-notifications");
+                options.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
                 driver = new FirefoxDriver(options);
                 break;
             }
@@ -33,6 +34,7 @@ public class WebDriverTestBase {
                 manager.chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--disable-notifications");
+                options.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
                 driver = new ChromeDriver(options);
                 break;
             }
@@ -40,6 +42,7 @@ public class WebDriverTestBase {
                 manager.edgedriver().setup();
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--disable-notifications");
+                options.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
                 driver = new EdgeDriver(options);
                 break;
             }
