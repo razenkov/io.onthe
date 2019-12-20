@@ -30,6 +30,7 @@
         <allure.version>2.0-BETA21</allure.version>
         <io.cucumber.version>2.3.1</io.cucumber.version>
         <aspectj.version>1.8.10</aspectj.version>
+        <allure-testng.version>2.12.0</allure-testng.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <reporting>
@@ -71,7 +72,7 @@
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
-            <version>2.12.0</version>
+            <version>${allure-testng.version}</version>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
