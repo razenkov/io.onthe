@@ -1,6 +1,6 @@
 package io.onthe.core;
 
-//import io.qameta.allure.Attachment;
+import io.qameta.allure.Attachment;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -24,7 +24,7 @@ public class TestListener implements ITestListener {
     public void onTestFailure(ITestResult iTestResult) {
         driver = ((WebDriverTestBase) iTestResult.getInstance()).driver;
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        File f = new File("/Users/mymac/IdeaProjects/onthemedia/FailedTestsScreens");
+        File f = new File("/Users/viacheslavrazenkov/IdeaProjects/io.onthe/FailedTestsScreens");
         try {
             FileUtils.cleanDirectory(f);
         } catch (IOException e) {
