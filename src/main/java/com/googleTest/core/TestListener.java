@@ -23,7 +23,7 @@ public class TestListener implements ITestListener {
     public void onTestFailure(ITestResult iTestResult) {
         driver = ((WebDriverTestBase) iTestResult.getInstance()).driver;
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        File f = new File("/FailedTestsScreens");
+        File f = new File("/Users/viacheslavrazenkov/IdeaProjects/io.onthe/FailedTestsScreens");
         try {
             FileUtils.cleanDirectory(f);
         } catch (IOException e) {
@@ -31,7 +31,7 @@ public class TestListener implements ITestListener {
         }
         try {
             FileUtils.copyFile(scrFile,
-                      new File("FailedTestsScreens/" + iTestResult.getMethod().getMethodName() + ".png"));
+                      new File("/Users/viacheslavrazenkov/IdeaProjects/io.onthe/FailedTestsScreens/" + iTestResult.getMethod().getMethodName() + ".png"));
         } catch (IOException e) {
             e.printStackTrace();
         }

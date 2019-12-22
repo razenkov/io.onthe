@@ -11,14 +11,11 @@ public class PropertiesCache {
 
     private PropertiesCache() {
         InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream("com.google_properties");
-        try {
-            config.load(inputStream);
-        } catch (IOException e) {
-            System.out.println(e.toString());
-        }
+        try { config.load(inputStream); }
+        catch (IOException e) { System.out.println(e.toString()); }
     }
 
-    public static String getProperty(String key) {
+    static String getProperty(String key) {
         return INSTANCE.config.getProperty(key);
     }
 }
